@@ -1,4 +1,4 @@
-import * as THREE from "three"
+import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // Initialize three js scene
@@ -10,7 +10,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(30);
+camera.position.set(0, 10, 30);
 
 renderer.render(scene, camera);
 
@@ -37,8 +37,8 @@ scene.add(mesh);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // Helpers
-const gridHelper = new THREE.GridHelper(100, 20)
-scene.add(gridHelper)
+const gridHelper = new THREE.GridHelper(100, 20);
+scene.add(gridHelper);
 
 // Animation loop
 function animate() {

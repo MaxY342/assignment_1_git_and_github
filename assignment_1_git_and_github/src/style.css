@@ -3,3 +3,7 @@ canvas {
   top: 0;
   position: fixed;
 }
+
+body {
+  overflow-x: hidden;
+}
