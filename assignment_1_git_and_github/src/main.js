@@ -1,4 +1,5 @@
 import * as THREE from "three"
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // Initialize three js scene
 const scene = new THREE.Scene();
@@ -32,11 +33,16 @@ const material = new THREE.MeshStandardMaterial({color:0xff0000});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
+// Orbit controls
+const controls = new OrbitControls(camera, renderer.domElement);
+
 // Animation loop
 function animate() {
   mesh.rotation.y += 0.01;
   mesh.rotation.x += 0.01;
   mesh.rotation.z += 0.01;
+
+  controls.update();
 
   renderer.render(scene, camera);
 }
