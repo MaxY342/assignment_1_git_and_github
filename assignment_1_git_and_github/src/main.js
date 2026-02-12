@@ -34,6 +34,10 @@ scene.add(mesh);
 
 // Animation loop
 function animate() {
+  mesh.rotation.y += 0.01;
+  mesh.rotation.x += 0.01;
+  mesh.rotation.z += 0.01;
+
   renderer.render(scene, camera);
 }
 
