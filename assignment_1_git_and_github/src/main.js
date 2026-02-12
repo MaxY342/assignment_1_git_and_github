@@ -36,6 +36,10 @@ scene.add(mesh);
 // Orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
 
+// Helpers
+const gridHelper = new THREE.GridHelper(100, 20)
+scene.add(gridHelper)
+
 // Animation loop
 function animate() {
   mesh.rotation.y += 0.01;
