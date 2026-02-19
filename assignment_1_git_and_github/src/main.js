@@ -29,7 +29,7 @@ scene.add(ambientLight);
 
 // Torus
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({color:0xff0000});
+const material = new THREE.MeshStandardMaterial({color:0x0000ff});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
